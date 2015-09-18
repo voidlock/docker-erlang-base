@@ -9,5 +9,8 @@ RUN cd /usr/src \
       && cd .. \
       && rm -rf rebar3
 
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-CMD ["erl"]
+ONBUILD COPY . /usr/src/app
+ONBUILD RUN rebar3 update && rebar3 release
