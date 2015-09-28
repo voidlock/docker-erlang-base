@@ -1,4 +1,4 @@
-FROM voidlock/erlang:17
+FROM voidlock/erlang:17.5
 MAINTAINER Alex Arnell <alex.arnell@cgmail.com>
 
 RUN cd /usr/src \
